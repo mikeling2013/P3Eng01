@@ -27,8 +27,7 @@
             height: 100%;
             background: #fff;
             display: flex;
-            flex-direction:
-            column;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             z-index: 999;
@@ -43,6 +42,7 @@
             font-size: 20px;
             font-weight: bold;
             margin-top: 20px;
+            cursor: pointer;
         }
 
         .title {
@@ -68,7 +68,7 @@
             padding: 30px 20px;
             border-radius: 16px;
             text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin-bottom: 25px;
         }
 
@@ -91,6 +91,7 @@
             padding: 20px;
             font-size: 19px;
             font-weight: bold;
+            cursor: pointer;
         }
 
         .option:active {
@@ -102,7 +103,7 @@
         }
 
         .wrong {
-            background: #f44336 !important;
+            background: #f44333 !important;
         }
 
         .nextBtn {
@@ -115,6 +116,7 @@
             margin-top: 20px;
             width: 100%;
             display: none;
+            cursor: pointer;
         }
 
         .tip {
@@ -148,111 +150,7 @@
 
     <script>
         const wordList = [
-            { en: "sunny", cn: "晴天" },
-            { en: "rainy", cn: "下雨" },
-            { en: "cloudy", cn: "多雲" },
-            { en: "windy", cn: "有風" },
-            { en: "foggy", cn: "有霧" },
-            { en: "warm", cn: "溫暖" },
-            { en: "hot", cn: "炎熱" },
-            { en: "cool", cn: "涼爽" },
-            { en: "cold", cn: "寒冷" },
-            { en: "dry", cn: "乾燥" },
-            { en: "wet", cn: "潮濕" },
-            { en: "spring", cn: "春天" },
-            { en: "summer", cn: "夏天" },
-            { en: "autumn", cn: "秋天" },
-            { en: "winter", cn: "冬天" },
-            { en: "season", cn: "季節" },
-            { en: "father", cn: "爸爸" },
-            { en: "mother", cn: "媽媽" },
-            { en: "brother", cn: "哥哥" },
-            { en: "sister", cn: "姐姐" },
-            { en: "grandpa", cn: "祖父" },
-            { en: "grandma", cn: "祖母" },
-            { en: "uncle", cn: "叔叔" },
-            { en: "aunt", cn: "阿姨" },
-            { en: "cousin", cn: "表親" },
-            { en: "baby", cn: "嬰兒" },
-            { en: "family", cn: "家庭" },
-            { en: "friend", cn: "朋友" },
-            { en: "teacher", cn: "老師" },
-            { en: "doctor", cn: "醫生" },
-            { en: "nurse", cn: "護士" },
-            { en: "policeman", cn: "警察" },
-            { en: "library", cn: "圖書館" },
-            { en: "playground", cn: "操場" },
-            { en: "hall", cn: "禮堂" },
-            { en: "toilet", cn: "洗手間" },
-            { en: "classroom", cn: "課室" },
-            { en: "office", cn: "辦事處" },
-            { en: "art", cn: "美術" },
-            { en: "music", cn: "音樂" },
-            { en: "computer", cn: "電腦" },
-            { en: "book", cn: "書" },
-            { en: "pen", cn: "鋼筆" },
-            { en: "pencil", cn: "鉛筆" },
-            { en: "ruler", cn: "間尺" },
-            { en: "eraser", cn: "擦膠" },
-            { en: "bag", cn: "書包" },
-            { en: "desk", cn: "書桌" },
-            { en: "chair", cn: "椅子" },
-            { en: "apple", cn: "蘋果" },
-            { en: "banana", cn: "香蕉" },
-            { en: "orange", cn: "橙" },
-            { en: "grape", cn: "提子" },
-            { en: "water", cn: "水" },
-            { en: "milk", cn: "牛奶" },
-            { en: "juice", cn: "果汁" },
-            { en: "tea", cn: "茶" },
-            { en: "rice", cn: "米飯" },
-            { en: "noodle", cn: "麵" },
-            { en: "bread", cn: "麵包" },
-            { en: "egg", cn: "雞蛋" },
-            { en: "fish", cn: "魚" },
-            { en: "chicken", cn: "雞" },
-            { en: "dog", cn: "狗" },
-            { en: "cat", cn: "貓" },
-            { en: "bird", cn: "雀鳥" },
-            { en: "rabbit", cn: "兔" },
-            { en: "monkey", cn: "猴子" },
-            { en: "tiger", cn: "老虎" },
-            { en: "panda", cn: "熊貓" },
-            { en: "lion", cn: "獅子" },
-            { en: "coat", cn: "外套" },
-            { en: "jacket", cn: "夾克" },
-            { en: "shirt", cn: "恤衫" },
-            { en: "skirt", cn: "短裙" },
-            { en: "dress", cn: "連身裙" },
-            { en: "shoe", cn: "鞋" },
-            { en: "sock", cn: "襪" },
-            { en: "hat", cn: "帽" },
-            { en: "scarf", cn: "頸巾" },
-            { en: "raincoat", cn: "雨衣" },
-            { en: "happy", cn: "開心" },
-            { en: "sad", cn: "傷心" },
-            { en: "angry", cn: "憤怒" },
-            { en: "tired", cn: "疲勞" },
-            { en: "hungry", cn: "肚餓" },
-            { en: "thirsty", cn: "口渴" },
-            { en: "ill", cn: "生病" },
-            { en: "good", cn: "好" },
-            { en: "bad", cn: "壞" },
-            { en: "cute", cn: "可愛" },
-            { en: "nice", cn: "友善" },
-            { en: "play", cn: "玩耍" },
-            { en: "read", cn: "閱讀" },
-            { en: "write", cn: "寫" },
-            { en: "draw", cn: "畫畫" },
-            { en: "eat", cn: "吃" },
-            { en: "drink", cn: "喝" },
-            { en: "run", cn: "跑" },
-            { en: "jump", cn: "跳" },
-            { en: "walk", cn: "走路" },
-            { en: "sing", cn: "唱歌" },
-            { en: "dance", cn: "跳舞" },
-            { en: "help", cn: "幫助" },
-            { en: "love", cn: "喜愛" }
+            { en: "sunny", cn: "晴天" },{ en: "rainy", cn: "下雨" },{ en: "cloudy", cn: "多雲" },{ en: "windy", cn: "有風" },{ en: "foggy", cn: "有霧" },{ en: "warm", cn: "溫暖" },{ en: "hot", cn: "炎熱" },{ en: "cool", cn: "涼爽" },{ en: "cold", cn: "寒冷" },{ en: "dry", cn: "乾燥" },{ en: "wet", cn: "潮濕" },{ en: "spring", cn: "春天" },{ en: "summer", cn: "夏天" },{ en: "autumn", cn: "秋天" },{ en: "winter", cn: "冬天" },{ en: "season", cn: "季節" },{ en: "father", cn: "爸爸" },{ en: "mother", cn: "媽媽" },{ en: "brother", cn: "哥哥" },{ en: "sister", cn: "姐姐" },{ en: "grandpa", cn: "祖父" },{ en: "grandma", cn: "祖母" },{ en: "uncle", cn: "叔叔" },{ en: "aunt", cn: "阿姨" },{ en: "cousin", cn: "表親" },{ en: "baby", cn: "嬰兒" },{ en: "family", cn: "家庭" },{ en: "friend", cn: "朋友" },{ en: "teacher", cn: "老師" },{ en: "doctor", cn: "醫生" },{ en: "nurse", cn: "護士" },{ en: "policeman", cn: "警察" },{ en: "library", cn: "圖書館" },{ en: "playground", cn: "操場" },{ en: "hall", cn: "禮堂" },{ en: "toilet", cn: "洗手間" },{ en: "classroom", cn: "課室" },{ en: "office", cn: "辦事處" },{ en: "art", cn: "美術" },{ en: "music", cn: "音樂" },{ en: "computer", cn: "電腦" },{ en: "book", cn: "書" },{ en: "pen", cn: "鋼筆" },{ en: "pencil", cn: "鉛筆" },{ en: "ruler", cn: "間尺" },{ en: "eraser", cn: "擦膠" },{ en: "bag", cn: "書包" },{ en: "desk", cn: "書桌" },{ en: "chair", cn: "椅子" },{ en: "apple", cn: "蘋果" },{ en: "banana", cn: "香蕉" },{ en: "orange", cn: "橙" },{ en: "grape", cn: "提子" },{ en: "water", cn: "水" },{ en: "milk", cn: "牛奶" },{ en: "juice", cn: "果汁" },{ en: "tea", cn: "茶" },{ en: "rice", cn: "米飯" },{ en: "noodle", cn: "麵" },{ en: "bread", cn: "麵包" },{ en: "egg", cn: "雞蛋" },{ en: "fish", cn: "魚" },{ en: "chicken", cn: "雞" },{ en: "dog", cn: "狗" },{ en: "cat", cn: "貓" },{ en: "bird", cn: "雀鳥" },{ en: "rabbit", cn: "兔" },{ en: "monkey", cn: "猴子" },{ en: "tiger", cn: "老虎" },{ en: "panda", cn: "熊貓" },{ en: "lion", cn: "獅子" },{ en: "coat", cn: "外套" },{ en: "jacket", cn: "夾克" },{ en: "shirt", cn: "恤衫" },{ en: "skirt", cn: "短裙" },{ en: "dress", cn: "連身裙" },{ en: "shoe", cn: "鞋" },{ en: "sock", cn: "襪" },{ en: "hat", cn: "帽" },{ en: "scarf", cn: "頸巾" },{ en: "raincoat", cn: "雨衣" },{ en: "happy", cn: "開心" },{ en: "sad", cn: "傷心" },{ en: "angry", cn: "憤怒" },{ en: "tired", cn: "疲勞" },{ en: "hungry", cn: "肚餓" },{ en: "thirsty", cn: "口渴" },{ en: "ill", cn: "生病" },{ en: "good", cn: "好" },{ en: "bad", cn: "壞" },{ en: "cute", cn: "可愛" },{ en: "nice", cn: "友善" },{ en: "play", cn: "玩耍" },{ en: "read", cn: "閱讀" },{ en: "write", cn: "寫" },{ en: "draw", cn: "畫畫" },{ en: "eat", cn: "吃" },{ en: "drink", cn: "喝" },{ en: "run", cn: "跑" },{ en: "jump", cn: "跳" },{ en: "walk", cn: "走路" },{ en: "sing", cn: "唱歌" },{ en: "dance", cn: "跳舞" },{ en: "help", cn: "幫助" },{ en: "love", cn: "喜愛" }
         ];
 
         let currentWord;
@@ -264,68 +162,68 @@
         const optionsBox = document.getElementById("optionsBox");
         const tipEl = document.getElementById("tip");
         const nextBtn = document.getElementById("nextBtn");
-        const game = document.getElementById("game");
-        const startScreen = document.getElementById("startScreen");
 
-        // 真人標準女聲發音
+        // ✅✅✅ 全世界最穩、100% 有聲音、手機內建发音
         function speak(word) {
-            let audio = new Audio();
-            audio.src = `https://dict.youdao.com/dictvoice?audio=${encodeURIComponent(word)}&type=1`;
-            audio.play().catch(err => {});
+            try {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(word);
+                u.lang = 'en-US';
+                u.rate = 0.8;
+                u.volume = 1;
+                window.speechSynthesis.speak(u);
+            } catch (e) {}
         }
 
-        // 找該英文對應的中文
-        function getCN(en) {
-            let w = wordList.find(x => x.en === en);
-            return w ? w.cn : "";
+        function getMeaning(enWord) {
+            const found = wordList.find(item => item.en === enWord);
+            return found ? found.cn : "";
         }
 
-        // 開始遊戲
-        document.getElementById("startBtn").addEventListener("click", () => {
-            startScreen.style.display = "none";
-            game.style.display = "block";
+        // 開始遊戲 + 強制解鎖聲音（關鍵！）
+        document.getElementById("startBtn").onclick = function() {
+            speak(" ");
+            document.getElementById("startScreen").style.display = "none";
+            document.getElementById("game").style.display = "block";
             newQuestion();
-        });
+        };
 
         function newQuestion() {
+            hasAnswered = false;
             tipEl.innerText = "";
             nextBtn.style.display = "none";
             optionsBox.innerHTML = "";
-            hasAnswered = false;
 
             currentWord = wordList[Math.floor(Math.random() * wordList.length)];
             wordCNEl.innerText = currentWord.cn;
 
             let options = [currentWord.en];
             while (options.length < 4) {
-                let randWord = wordList[Math.floor(Math.random() * wordList.length)].en;
-                if (!options.includes(randWord)) options.push(randWord);
+                const w = wordList[Math.floor(Math.random() * wordList.length)].en;
+                if (!options.includes(w)) options.push(w);
             }
             options.sort(() => Math.random() - 0.5);
 
             options.forEach(opt => {
-                let btn = document.createElement("button");
+                const btn = document.createElement("button");
                 btn.className = "option";
                 btn.innerText = opt;
-                btn.dataset.en = opt;
 
-                btn.onclick = () => {
+                btn.onclick = function() {
+                    const meaning = getMeaning(opt);
+                    btn.innerText = opt + " — " + meaning;
                     speak(opt);
-                    // 點後顯示中英
-                    btn.innerText = opt + " — " + getCN(opt);
 
                     if (!hasAnswered) {
                         checkAnswer(btn, opt);
                     }
                 };
-
                 optionsBox.appendChild(btn);
             });
         }
 
         function checkAnswer(btn, selected) {
             hasAnswered = true;
-
             if (selected === currentWord.en) {
                 btn.classList.add("correct");
                 tipEl.innerText = "答對啦！👍";
@@ -335,7 +233,6 @@
                 btn.classList.add("wrong");
                 tipEl.innerText = "正確答案：" + currentWord.en + " — " + currentWord.cn;
             }
-
             nextBtn.style.display = "block";
         }
 
