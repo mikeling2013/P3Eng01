@@ -27,7 +27,8 @@
             height: 100%;
             background: #fff;
             display: flex;
-            flex-direction: column;
+            flex-direction:
+            column;
             align-items: center;
             justify-content: center;
             z-index: 999;
@@ -273,6 +274,12 @@
             audio.play().catch(err => {});
         }
 
+        // 找該英文對應的中文
+        function getCN(en) {
+            let w = wordList.find(x => x.en === en);
+            return w ? w.cn : "";
+        }
+
         // 開始遊戲
         document.getElementById("startBtn").addEventListener("click", () => {
             startScreen.style.display = "none";
@@ -300,10 +307,13 @@
                 let btn = document.createElement("button");
                 btn.className = "option";
                 btn.innerText = opt;
+                btn.dataset.en = opt;
 
-                // 重點：永遠可以點擊發音
                 btn.onclick = () => {
                     speak(opt);
+                    // 點後顯示中英
+                    btn.innerText = opt + " — " + getCN(opt);
+
                     if (!hasAnswered) {
                         checkAnswer(btn, opt);
                     }
@@ -313,7 +323,6 @@
             });
         }
 
-        // 檢查答案（只判斷一次，不鎖定按鈕）
         function checkAnswer(btn, selected) {
             hasAnswered = true;
 
@@ -324,7 +333,7 @@
                 scoreEl.innerText = score;
             } else {
                 btn.classList.add("wrong");
-                tipEl.innerText = "正確答案：" + currentWord.en;
+                tipEl.innerText = "正確答案：" + currentWord.en + " — " + currentWord.cn;
             }
 
             nextBtn.style.display = "block";
